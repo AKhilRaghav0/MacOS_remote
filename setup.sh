@@ -38,8 +38,16 @@ brew install --cask teamviewer
 #Anydesk
 brew install --cask anydesk
 
-##
-##sudo /Applications/AnyDesk.app/Contents/MacOS/AnyDesk --get-id
+##Enable AnyDesk automatically
+
+defaults write com.apple.universalaccessAuthWarning "/Applications/AnyDesk.app" -bool true
+defaults write com.apple.universalaccessAuthWarning "/Applications/AnyDesk.app/Contents/MacOS/AnyDesk" -bool true
+defaults write com.apple.universalaccessAuthWarning "3::/Applications" -bool true
+defaults write com.apple.universalaccessAuthWarning "3::/Applications/AnyDesk.app" -bool true
+defaults write com.apple.universalaccessAuthWarning "com.philandro.anydesk" -bool true
+
+sudo /Applications/AnyDesk.app/Contents/MacOS/AnyDesk --get-id
+
 
 
 
