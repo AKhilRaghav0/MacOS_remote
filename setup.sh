@@ -43,8 +43,7 @@ defaults write "Apple Global Domain" MultipleSessionsEnabled -bool true
 
 #Disable Screen-Lock
 defaults write com.apple.loginwindow DisableScreenLock -bool true
-#Show a lighter username/password prompt instead of a list of all the users
-defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true
+
 defaults write com.apple.loginwindow AllowList -string '*'
 
 #disables Password Globaly (comment them if not required)
