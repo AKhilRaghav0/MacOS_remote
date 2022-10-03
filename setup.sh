@@ -28,8 +28,7 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 
 #Enable Performance mode
 sudo nvram boot-args="serverperfmode=1 $(nvram boot-args 2>/dev/null | cut -f 2-)"
-#disable Heavy login screen wallpaper
-sudo defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture ""
+
 #Reduce Motion and Transparency 
 defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
 defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
