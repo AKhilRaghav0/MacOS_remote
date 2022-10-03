@@ -46,7 +46,7 @@ defaults write com.apple.universalaccessAuthWarning "3::/Applications" -bool tru
 defaults write com.apple.universalaccessAuthWarning "3::/Applications/AnyDesk.app" -bool true
 defaults write com.apple.universalaccessAuthWarning "com.philandro.anydesk" -bool true
 
-sudo /Applications/AnyDesk.app/Contents/MacOS/AnyDesk --get-id
+
 
 
 
