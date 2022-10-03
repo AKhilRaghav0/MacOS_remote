@@ -47,9 +47,6 @@ defaults write com.apple.loginwindow DisableScreenLock -bool true
 defaults write com.apple.loginwindow AllowList -string '*'
 
 
-#Disable apps from going to sleep at all
-sudo -u "${REAL_NAME}" sudo defaults write NSGlobalDomain NSAppSleepDisabled -bool YES
-
 #install ngrok
 brew install --cask ngrok
 #install chrome
