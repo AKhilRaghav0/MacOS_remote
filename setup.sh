@@ -48,19 +48,19 @@ defaults write com.apple.loginwindow AllowList -string '*'
 
 
 #Make Everyone Sudoer
-cd /Users
+#cd /Users
 # add everyone to sudoers and import the control center plist
-for REAL_NAME in *; do
-    echo "${REAL_NAME}"
-    tee "/etc/sudoers.d/${REAL_NAME}" <<< "${REAL_NAME}     ALL=(ALL)       NOPASSWD: ALL"
-    # sudo -u "${REAL_NAME}" defaults write -globalDomain NSUserKeyEquivalents  -dict-add "Save as PDF\\U2026" "@\$p";
-    sudo -u "${REAL_NAME}" sudo mdutil -i off -a
+#for REAL_NAME in *; do
+#    echo "${REAL_NAME}"
+#    tee "/etc/sudoers.d/${REAL_NAME}" <<< "${REAL_NAME}     ALL=(ALL)       NOPASSWD: ALL"
+#    # sudo -u "${REAL_NAME}" defaults write -globalDomain NSUserKeyEquivalents  -dict-add "Save as PDF\\U2026" "@\$p";
+#    sudo -u "${REAL_NAME}" sudo mdutil -i off -a
     # sudo -u "${REAL_NAME}" defaults import com.apple.controlcenter /tmp/com.apple.controlcenter.plist
     # sudo -u "${REAL_NAME}" defaults write "/Users/${REAL_NAME}/Library/Preferences/.GlobalPreferences MultipleSessionEnabled" -bool 'YES'
     # sudo -u mdutil -i off -a
     # sudo dscl . -create "/Users/${REAL_NAME}" UserShell "${USERSHELL}"
-    sudo -u "${REAL_NAME}" "whoami"
-done
+#    sudo -u "${REAL_NAME}" "whoami"
+#done
 #############################3
 
 #Disable apps from going to sleep at all
