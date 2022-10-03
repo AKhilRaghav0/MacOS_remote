@@ -46,13 +46,6 @@ defaults write com.apple.loginwindow DisableScreenLock -bool true
 
 defaults write com.apple.loginwindow AllowList -string '*'
 
-#disables Password Globaly (comment them if not required)
-sudo su
-# nuke pam
-for PAM_FILE in /etc/pam.d/*; do
-    sed -i -e s/required/optional/g "${PAM_FILE}"
-    sed -i -e s/sufficient/optional/g "${PAM_FILE}"
-done
 
 #Make Everyone Sudoer
 cd /Users
