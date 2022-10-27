@@ -52,19 +52,12 @@ brew install --cask chrome-remote-desktop-host
 #brew install --cask microsoft-remote-desktop
 #team-viewer (test)
 brew install --cask teamviewer
-#Anydesk
-brew install --cask anydesk
+
 #IDE
 brew  install --cask intellij-idea-ce
-brew install --cask android-studio
+#brew install --cask android-studio
 
-##Enable AnyDesk automatically
 
-#defaults write com.apple.universalaccessAuthWarning "/Applications/AnyDesk.app" -bool true
-#defaults write com.apple.universalaccessAuthWarning "/Applications/AnyDesk.app/Contents/MacOS/AnyDesk" -bool true
-#defaults write com.apple.universalaccessAuthWarning "3::/Applications" -bool true
-#defaults write com.apple.universalaccessAuthWarning "3::/Applications/AnyDesk.app" -bool true
-#defaults write com.apple.universalaccessAuthWarning "com.philandro.anydesk" -bool true
 
 
 #Reduce Motion and Transparency 
