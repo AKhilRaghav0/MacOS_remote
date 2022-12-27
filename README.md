@@ -4,6 +4,60 @@ MacOS Remote Desktop for Xcode &amp; for testing purpose.
 
 [<img src="https://i.ytimg.com/vi/MZYly2gmmHs/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=MZYly2gmmHs)
 
+## OSX Optimizations
+
+Below you will find extremely good optimizers, particularly for virtual machines.
+Some of the commands are dangerous from a remote access perspective, but they will greatly optimize your VM/MacOS_Remote.
+
+
+## Disable spotlight indexing on macOS to heavily speed up Virtual Instances.
+
+```bash
+# massively increase virtualized macOS by disabling spotlight.
+sudo mdutil -i off -a
+
+# since you can't use spotlight to find apps, you can renable with
+# sudo mdutil -i on -a
+
+```
+
+### Skip the GUI login screen (at your own risk!)
+```bash
+defaults write com.apple.loginwindow autoLoginUser -bool true
+```
+### Enable performance mode
+
+Turn on performance mode to dedicate additional system resources for server applications.
+
+Details: https://support.apple.com/en-us/HT202528
+
+```
+# check if enabled (should contain `serverperfmode=1`)
+nvram boot-args
+
+# turn on
+sudo nvram boot-args="serverperfmode=1 $(nvram boot-args 2>/dev/null | cut -f 2-)"
+
+# turn off
+sudo nvram boot-args="$(nvram boot-args 2>/dev/null | sed -e $'s/boot-args\t//;s/serverperfmode=1//')"
+```
+### Disable heavy login screen wallpaper
+
+```bash
+sudo defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture ""
+```
+
+### Reduce Motion & Transparency
+
+```bash
+defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
+defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
+defaults write com.apple.universalaccess reduceMotion -int 1
+defaults write com.apple.universalaccess reduceTransparency -int 1
+defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
+```
+
+
 
 ## System Info
 
