@@ -51,6 +51,7 @@ brew install --cask teamviewer
 brew install --cask onedrive
 brew install --cask qbittorrent
 brew install --cask firefox
+brew install --cask folx
 
 #IDE
 #brew  install --cask intellij-idea-ce
