@@ -1,6 +1,6 @@
 # MacOS_remote
 MacOS Remote Desktop for Xcode &amp; for testing purpose.
-
+[![macOS](https://github.com/krypticbit09/MacOS_remote/actions/workflows/action.yml/badge.svg?event=workflow_dispatch)](https://github.com/krypticbit09/MacOS_remote/actions/workflows/action.yml)
 
 [<img src="https://i.ytimg.com/vi/MZYly2gmmHs/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=MZYly2gmmHs)
 
